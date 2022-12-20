@@ -50,7 +50,9 @@ while True:
     pulse_duration = pulse_end - pulse_start
     distance = pulse_duration * 17150
     distance = round(distance, 2)
-
+    
+    print ("Distance: %.1f cm" % distance)
+    
     # If the distance is smaller than the target, move the robot backwards
     if distance < target_distance:
         # Set the motor speed and direction
