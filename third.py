@@ -95,6 +95,9 @@ try:
       stop_motors()
 
 except KeyboardInterrupt:
-  # Clean up the GPIO pins when the program is interrupted
-  GPIO.cleanup()
+  # Handle keyboard interrupt
+  pass
 
+finally:
+  # Reset the GPIO settings and release the pins
+  GPIO.cleanup()
