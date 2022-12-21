@@ -1,11 +1,21 @@
 import RPi.GPIO as GPIO
 import time
+import signal
+import sys
 
 # Set up the HC-SR04 distance sensor
 TRIG = 23
 ECHO = 24
 
 GPIO.setmode(GPIO.BCM)
+
+def close(signal, frame):
+	print("\nTurning off ultrasonic distance detection...\n")
+	GPIO.cleanup() 
+	sys.exit(0)
+
+signal.signal(signal.SIGINT, close)
+
 GPIO.setup(TRIG,GPIO.OUT)
 GPIO.setup(ECHO,GPIO.IN)
 
