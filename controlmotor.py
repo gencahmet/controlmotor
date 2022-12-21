@@ -19,6 +19,8 @@ signal.signal(signal.SIGINT, close)
 GPIO.setup(TRIG,GPIO.OUT)
 GPIO.setup(ECHO,GPIO.IN)
 
+GPIO.setwarnings(False)
+
 # Set up the L298N motor driver
 ENA = 13
 ENB = 20
