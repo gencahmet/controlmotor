@@ -62,7 +62,7 @@ def move_forward():
 
   # Set the motor speeds
   motor1_pwm.start(MOTOR1_SPEED)
-    motor2_pwm.start(MOTOR2_SPEED)
+  motor2_pwm.start(MOTOR2_SPEED)
 
 def move_backward():
   # Set the motor driver to drive the motors backward
