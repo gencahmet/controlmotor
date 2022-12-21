@@ -19,7 +19,6 @@ signal.signal(signal.SIGINT, close)
 GPIO.setup(TRIG,GPIO.OUT)
 GPIO.setup(ECHO,GPIO.IN)
 
-GPIO.setwarnings(False)
 
 # Set up the L298N motor driver
 ENA = 13
@@ -29,12 +28,12 @@ IN2 = 16
 IN3 = 21
 IN4 = 26
 
-GPIO.setup(ENA,GPIO.OUT)
-GPIO.setup(ENB,GPIO.OUT)
-GPIO.setup(IN1,GPIO.OUT)
-GPIO.setup(IN2,GPIO.OUT)
-GPIO.setup(IN3,GPIO.OUT)
-GPIO.setup(IN4,GPIO.OUT)
+GPIO.setup(ENA,GPIO.OUT,initial=GPIO.HIGH)
+GPIO.setup(ENB,GPIO.OUT,initial=GPIO.HIGH)
+GPIO.setup(IN1,GPIO.OUT,initial=GPIO.HIGH)
+GPIO.setup(IN2,GPIO.OUT,initial=GPIO.HIGH)
+GPIO.setup(IN3,GPIO.OUT,initial=GPIO.HIGH)
+GPIO.setup(IN4,GPIO.OUT,initial=GPIO.HIGH)
 
 motor1_pwm = GPIO.PWM(ENA, 500)
 motor2_pwm = GPIO.PWM(ENB, 500)
