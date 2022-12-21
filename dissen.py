@@ -7,8 +7,8 @@ import sys
 GPIO.setmode(GPIO.BCM)
 
 # set GPIO Pins
-pinTrigger = 17
-pinEcho = 27
+pinTrigger = 18
+pinEcho = 24
 
 def close(signal, frame):
 	print("\nTurning off ultrasonic distance detection...\n")
