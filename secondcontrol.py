@@ -48,4 +48,4 @@ while True:
 	print ("Distance: %.1f cm" % distance)
 	time.sleep(1)
   
-  GPIO.cleanup()
+GPIO.cleanup()
